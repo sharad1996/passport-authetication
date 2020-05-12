@@ -31,6 +31,13 @@ app.all('/*', function (req, res, next) {
 
 });
 
+//passpot initialize
+app.use(passport.initialize());
+app.use(passport.session());
+//passport logic call
+const initPassport = require('./passport')(passport);
+
+
 //api use by user to call server
 app.use('/api', require('./routes/user'));
 
