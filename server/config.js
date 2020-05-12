@@ -1,4 +1,4 @@
-const mongo = require("mongoose");
+import mongo from "mongoose";
 
 const db =  mongo.connect("mongodb://127.0.0.1:27017/blogDB",
   {useMongoClient: true},
